@@ -1,5 +1,5 @@
 # ☕ Brewing Insights: End-to-End Coffee Shop Sales Analysis
-![Brewing Insights Dashboard](dashboard 1.png)
+![Brewing Insights Dashboard](dashboard%201.png)
 ## 📌 Project Overview
 **Brewing Insights** is an end-to-end data analysis of a coffee shop's sales operations. The goal of this project is to transform raw transactional data into actionable business intelligence to help optimize staffing, inventory management, and product strategy. 
 
