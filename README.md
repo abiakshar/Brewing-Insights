@@ -35,16 +35,16 @@ This project features a robust end-to-end pipeline:
 ## 📈 Dashboard Showcase
 
 ### 1. Executive Summary
-![Executive Summary](image_a98d96.png)
+![Executive Summary](Executive Summary.png)
 
 ### 2. Top-Line Performance
-![Top-Line Performance](image_a98d59.png)
+![Top-Line Performance](Top Line Performance.png)
 
 ### 3. Customer Spending
-![Customer Spending](image_a98d1f.png)
+![Customer Spending](Customer Behavior.png)
 
 ### 4. Staffing Optimization
-![Staffing Optimization](image_a98ce2.png)
+![Staffing Optimization](Staffing Optimization.png)
 
 ## 🚀 How to Run/Replicate
 1.  **Database Setup:** Execute the `CoffeeShop_ETL.sql` script in SQL Server Management Studio (SSMS) to create the database, import the CSV, and run the quality checks.
