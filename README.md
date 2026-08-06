@@ -1,58 +1,52 @@
-# ☕ Brewing Insights: Operational & Revenue Optimization Analysis
-![Brewing Insights Dashboard](dashboard%201.png)
+# ☕ Brewing Insights: End-to-End Coffee Shop Data Analytics
 
-## 📌 Executive Summary
-An end-to-end business intelligence project analyzing **149,000+ coffee shop transactions ($698.8K revenue)** across 3 store locations. By combining **SQL-driven ETL and statistical profiling** with **Power BI visualization**, this analysis uncovered core operational bottlenecks and modeled actionable strategy shifts to increase labor efficiency and average order value (AOV).
+![SQL](https://img.shields.io/badge/MSSQL-00468D?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Data Analysis](https://img.shields.io/badge/Data_Analysis-Transform_&_Visualize-success?style=for-the-badge)
 
----
+## 🎯 Business Objective
+The primary goal of this project is to analyze six months of retail data to **identify revenue growth levers, optimize Average Order Value (AOV), and streamline staffing across all locations**. By transitioning raw transactional data into dynamic dashboards, this project provides actionable, data-driven recommendations for store managers and stakeholders.
 
-## 🚀 Key Business Insights & Strategic Recommendations
+## 📊 Dataset
+*   **Total Records:** 149,116 raw transaction rows.
+*   **Timeframe:** January 2023 – June 2023.
+*   **Attributes:** Transaction IDs, dates/times, quantities, store locations (Astoria, Hell's Kitchen, Lower Manhattan), product categories, and unit prices.
 
-| Problem Identified | Data Insight Uncovered | Actionable Recommendation |
-| :--- | :--- | :--- |
-| **Labor Misallocation** | **69% of total transaction volume** occurs between 6 AM and 10 AM, but shift staffing was spread evenly across 12-hour days. | **Front-load 25% more staff to the Morning Rush** to reduce order wait times and capture peak foot traffic. |
-| **Low Food Attachment** | Beverage lines (Coffee & Tea) dominate **66.7% of volume**, while Bakery represents only **11.7% of sales**. | Implement a **$1 morning pastry add-on** at checkout to lift average order value ($4.68). |
-| **Off-Peak OPEX Drain** | Lower Manhattan location revenue drops to **near $0 after 6 PM**, yet operating costs remain fixed. | **Reduce operating hours by 2 hours** at Lower Manhattan to trim utility and labor expenses without impacting revenue. |
+## 🛠️ Methodology & ETL (SQL to Power BI)
+This project features a robust end-to-end pipeline:
 
----
+1.  **Data Ingestion & Profiling (MSSQL):** 
+    *   Utilized `BULK INSERT` to load raw CSV data.
+    *   Performed rigorous data quality checks, including hidden whitespace detection (`LTRIM`/`RTRIM`), regex pattern matching for invalid characters, and granularity consistency checks.
+2.  **Data Cleaning & Fact Table Creation:** 
+    *   Handled time sequence logic, statistical outlier detection (transactions > 4 standard deviations), and missing pattern detection.
+    *   Created a structured `coffee_shop_sales_fact` table with strict constraints (`CHECK(transaction_qty > 0)`).
+3.  **Exploratory Data Analysis (EDA):** 
+    *   Wrote complex SQL queries utilizing Window Functions and CTEs to analyze month-over-month growth, 7-day moving averages, and market basket combinations.
+4.  **Data Visualization (Power BI):** 
+    *   Imported the clean fact table into Power BI to build interactive, operational dashboards targeting executive summary, top-line performance, customer spending, and staffing.
 
-## 🎯 Business Objectives
-This analysis was engineered to answer four critical leadership questions:
-1. **Resource Allocation:** How can we optimize store shift schedules based on hourly throughput?
-2. **Product Strategy:** Which product categories drive volume versus margin, and where are cross-selling opportunities?
-3. **Location Benchmarking:** How do store locations differ in peak-hour revenue, volume, and customer spending habits?
-4. **Growth Trajectory:** What is the month-over-month (MoM) revenue trend across the first half of the year?
+## 💡 Key Insights
+*   **Revenue & Volume:** Generated **$698.81K** in total revenue across **149K orders** (214K items sold).
+*   **Customer Behavior:** Single-item purchases completely dominate customer behavior, keeping the Average Order Value (AOV) stagnant at **$4.69**.
+*   **Operational Bottlenecks:** The morning and mid-day rushes (specifically 8 AM - 10 AM) account for **57%** of all orders. 
+*   **Store Performance:** Revenue is evenly distributed, with **Hell's Kitchen** performing slightly above the rest as the top store ($236.5K).
 
----
+## 📈 Dashboard Showcase
 
-## 🛠️ Technical Architecture & Methodology
-│  Raw Transaction CSVs  │ ───► │   T-SQL (SQL Server)     │ ───► │    Power BI Dashboard    │
-│   (149K+ Records)      │      │  ETL, Cleaning & EDA     │      │   Interactive Reporting  │
+### 1. Executive Summary
+![Executive Summary](image_a98d96.png)
 
-### 1. Data Ingestion & Quality Control (SQL)
-* **High-Volume Ingestion:** Used `BULK INSERT` to stage raw transaction records into SQL Server.
-* **Data Sanitization:** Cleared trailing white spaces, standardized datetime schemas, and applied `CHECK` constraints (`transaction_qty > 0`, `unit_price > 0`).
-* **Outlier Scrubbing:** Applied statistical profiling ($\mu \pm 4\sigma$) to identify and isolate extreme transaction anomalies before modeling.
+### 2. Top-Line Performance
+![Top-Line Performance](image_a98d59.png)
 
-### 2. Advanced Analytics & Modeling (SQL)
-* Developed analytical views leveraging **Window Functions (`RANK()`, `LAG()`, `OVER()`)** and **CTEs**.
-* Built **7-day rolling revenue averages** and evaluated Month-over-Month (MoM) growth rates.
-* Conducted **Market Basket Analysis** to map basket sizes, item counts, and revenue impact across weekday vs. weekend patterns.
+### 3. Customer Spending
+![Customer Spending](image_a98d1f.png)
 
-### 3. Dimensional Modeling & Dashboarding (Power BI)
-* Designed a star schema linking transaction facts with date, product, and store dimension tables.
-* Built dynamic measures using **DAX** for Peak Period classification, Price Sensitivity tracking, and hourly trend analysis.
+### 4. Staffing Optimization
+![Staffing Optimization](image_a98ce2.png)
 
----
-
-## 💻 Tech Stack
-* **Database Engine & ETL:** T-SQL (SQL Server)
-* **Business Intelligence & Modeling:** Power BI, DAX
-* **Analytical Techniques:** Statistical Outlier Detection, Rolling Averages, Market Basket Analysis, Dimensional Modeling
-
----
-
-## 🗂️ Repository Structure
-* **`CoffeeSalesProject_Portfolio.sql`**: Full ETL pipeline, data quality checks, staging tables, and EDA queries.
-* **`Brewing_Insights - CoffeeShopSales.pbix`**: Interactive Power BI dashboard file.
-* **`README.md`**: Executive summary and technical documentation.
+## 🚀 How to Run/Replicate
+1.  **Database Setup:** Execute the `CoffeeShop_ETL.sql` script in SQL Server Management Studio (SSMS) to create the database, import the CSV, and run the quality checks.
+2.  **Dashboard Viewing:** Download the `Brewing_Insights_Dashboard.pbix` file.
+3.  **Open in Power BI:** Open the file using Power BI Desktop to interact with the visualizations. (Ensure your data source settings point to your local SQL Server instance if you wish to refresh the data).
