@@ -75,6 +75,7 @@ Business Insights
 Strategic Recommendations
 ```
 ## 🛠️ Methodology & ETL (SQL to Power BI)
+
 This project features a robust end-to-end pipeline:
 
 1.  **Data Ingestion & Profiling (MSSQL):** 
@@ -88,7 +89,7 @@ This project features a robust end-to-end pipeline:
 4.  **Data Visualization (Power BI):** 
     *   Imported the clean fact table into Power BI to build interactive, operational dashboards targeting executive summary, top-line performance, customer spending, and staffing.
 
-# 📈 Dashboard Showcase
+## 📈 Dashboard Showcase
 
 ### 1. Executive Summary
 ![Executive Summary](Executive%20Summary.png)
@@ -161,7 +162,7 @@ Identifies peak demand periods and staffing requirements to improve operational 
 
 Enables managers to optimize employee scheduling, reduce wait times, improve service quality, and maintain adequate inventory during peak hours.
 
-# 📈 Business Recommendations
+## 📈 Business Recommendations
 
 Based on the analysis, the following initiatives can improve business performance:
 
@@ -179,14 +180,15 @@ Based on the analysis, the following initiatives can improve business performanc
 * Replicate successful sales strategies from Hell's Kitchen across other stores.
 * Promote complementary products to encourage multi-item purchases.
 
-#💡 Key Insights
+##💡 Key Insights
+
 *   **Revenue & Volume:** Generated **$698.81K** in total revenue across **149K orders** (214K items sold).
 *   **Customer Behavior:** Single-item purchases completely dominate customer behavior, keeping the Average Order Value (AOV) stagnant at **$4.69**.
 *   **Operational Bottlenecks:** The morning and mid-day rushes (specifically 8 AM - 10 AM) account for **57%** of all orders. 
 *   **Store Performance:** Revenue is evenly distributed, with **Hell's Kitchen** performing slightly above the rest as the top store ($236.5K).
 
 
-# 🚀 Skills Demonstrated
+## 🚀 Skills Demonstrated
 
 ### SQL
 
@@ -218,7 +220,7 @@ Based on the analysis, the following initiatives can improve business performanc
 * Staffing Optimization
 * Executive Reporting
 
-# 🎯 Executive Conclusion
+## 🎯 Executive Conclusion
 
 The analysis demonstrates a healthy and stable business with balanced revenue distribution across all stores. While overall sales performance is strong, significant opportunities exist to increase Average Order Value through product bundling, optimize staffing during peak demand hours, and improve operational efficiency using data-driven decision-making.
 
