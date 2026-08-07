@@ -224,4 +224,8 @@ Based on the analysis, the following initiatives can improve business performanc
 
 The analysis demonstrates a healthy and stable business with balanced revenue distribution across all stores. While overall sales performance is strong, significant opportunities exist to increase Average Order Value through product bundling, optimize staffing during peak demand hours, and improve operational efficiency using data-driven decision-making.
 
+## 🚀 Future Scope
+
+This project marks the beginning of my journey into retail and business analytics. As someone who is genuinely interested in the coffee business, my next goal is to apply the same analytical approach to Indian coffee and tea shop data. I hope to explore how customer behavior, product preferences, and operational challenges differ from the U.S. market and develop insights that can support better business decisions for local businesses.
+
 
