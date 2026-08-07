@@ -166,21 +166,21 @@ Enables managers to optimize employee scheduling, reduce wait times, improve ser
 
 Based on the analysis, the following initiatives can improve business performance:
 
-## Increase Average Order Value
+### Increase Average Order Value
 * Introduce beverage and bakery bundle offers.
 * Promote checkout cross-selling.
 * Launch limited-time combo promotions.
-## Improve Operational Efficiency
+### Improve Operational Efficiency
 * Schedule additional staff during morning peak hours.
 * Align shift planning with hourly customer demand.
-## Inventory Optimization
+### Inventory Optimization
 * Maintain higher inventory levels for high-demand products.
 * Forecast stock requirements using historical sales trends.
-## Revenue Growth
+### Revenue Growth
 * Replicate successful sales strategies from Hell's Kitchen across other stores.
 * Promote complementary products to encourage multi-item purchases.
 
-##💡 Key Insights
+## 💡 Key Insights
 
 *   **Revenue & Volume:** Generated **$698.81K** in total revenue across **149K orders** (214K items sold).
 *   **Customer Behavior:** Single-item purchases completely dominate customer behavior, keeping the Average Order Value (AOV) stagnant at **$4.69**.
