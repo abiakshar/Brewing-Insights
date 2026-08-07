@@ -46,7 +46,4 @@ This project features a robust end-to-end pipeline:
 ### 4. Staffing Optimization
 ![Staffing Optimization](Staffing%20Optimization.png)
 
-## 🚀 How to Run/Replicate
-1.  **Database Setup:** Execute the `CoffeeShop_ETL.sql` script in SQL Server Management Studio (SSMS) to create the database, import the CSV, and run the quality checks.
-2.  **Dashboard Viewing:** Download the `Brewing_Insights_Dashboard.pbix` file.
-3.  **Open in Power BI:** Open the file using Power BI Desktop to interact with the visualizations. (Ensure your data source settings point to your local SQL Server instance if you wish to refresh the data).
+
