@@ -4,6 +4,15 @@
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![Data Analysis](https://img.shields.io/badge/Data_Analysis-Transform_&_Visualize-success?style=for-the-badge)
 
+## Why I chose this project?
+
+As someone who loves coffee and has an interest in the coffee business, I was curious about what happens behind the counter.
+Whenever I see a busy coffee or tea shop, I find myself wondering:
+
+Why is this shop flooded with customers? What drives their purchases? Which products contribute most to sales? And how do managers handle the rush?
+
+That curiosity became the starting point for this project.
+
 ## 🎯 Business Objective
 An end-to-end SQL Server and Power BI analytics project that transforms six months of retail transaction data into actionable business insights for revenue growth, customer behavior, and operational optimization.
 
@@ -162,6 +171,13 @@ Identifies peak demand periods and staffing requirements to improve operational 
 
 Enables managers to optimize employee scheduling, reduce wait times, improve service quality, and maintain adequate inventory during peak hours.
 
+## 💡 Key Insights
+
+*   **Revenue & Volume:** Generated **$698.81K** in total revenue across **149K orders** (214K items sold).
+*   **Customer Behavior:** Single-item purchases completely dominate customer behavior, keeping the Average Order Value (AOV) stagnant at **$4.69**.
+*   **Operational Bottlenecks:** The morning and mid-day rushes (specifically 8 AM - 10 AM) account for **57%** of all orders. 
+*   **Store Performance:** Revenue is evenly distributed, with **Hell's Kitchen** performing slightly above the rest as the top store ($236.5K).
+
 ## 📈 Business Recommendations
 
 Based on the analysis, the following initiatives can improve business performance:
@@ -170,23 +186,18 @@ Based on the analysis, the following initiatives can improve business performanc
 * Introduce beverage and bakery bundle offers.
 * Promote checkout cross-selling.
 * Launch limited-time combo promotions.
+  
 ### Improve Operational Efficiency
 * Schedule additional staff during morning peak hours.
 * Align shift planning with hourly customer demand.
+  
 ### Inventory Optimization
 * Maintain higher inventory levels for high-demand products.
 * Forecast stock requirements using historical sales trends.
+  
 ### Revenue Growth
 * Replicate successful sales strategies from Hell's Kitchen across other stores.
 * Promote complementary products to encourage multi-item purchases.
-
-## 💡 Key Insights
-
-*   **Revenue & Volume:** Generated **$698.81K** in total revenue across **149K orders** (214K items sold).
-*   **Customer Behavior:** Single-item purchases completely dominate customer behavior, keeping the Average Order Value (AOV) stagnant at **$4.69**.
-*   **Operational Bottlenecks:** The morning and mid-day rushes (specifically 8 AM - 10 AM) account for **57%** of all orders. 
-*   **Store Performance:** Revenue is evenly distributed, with **Hell's Kitchen** performing slightly above the rest as the top store ($236.5K).
-
 
 ## 🚀 Skills Demonstrated
 
