@@ -179,24 +179,17 @@ This project features a robust end-to-end pipeline:
 
 ## 📈 Business Recommendations
 
-Based on the analysis, the following initiatives can improve business performance:
+### 1. Increase Average Order Value
+Move customers from single-item purchases toward multi-item baskets through beverage + bakery bundles and checkout cross-selling.
 
-### Increase Average Order Value
-* Introduce beverage and bakery bundle offers.
-* Promote checkout cross-selling.
-* Launch limited-time combo promotions.
-  
-### Improve Operational Efficiency
-* Schedule additional staff during morning peak hours.
-* Align shift planning with hourly customer demand.
-  
-### Inventory Optimization
-* Maintain higher inventory levels for high-demand products.
-* Forecast stock requirements using historical sales trends.
-  
-### Revenue Growth
-* Replicate successful sales strategies from Hell's Kitchen across other stores.
-* Promote complementary products to encourage multi-item purchases.
+### 2. Optimize Peak-Hour Staffing
+Align employee schedules with hourly demand, particularly during the morning rush, to improve service efficiency and reduce potential wait times.
+
+### 3. Strengthen Inventory Planning
+Prioritize inventory availability for high-demand categories, particularly Coffee, before peak operating periods.
+
+### 4. Replicate Store-Level Success
+Analyze the practices contributing to Hell's Kitchen's slightly higher revenue and evaluate whether they can be applied across other locations.
 
 ## 🚀 Skills Demonstrated
 
