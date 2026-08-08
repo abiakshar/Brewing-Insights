@@ -6,35 +6,27 @@
 
 ## Why I chose this project?
 
-As someone who loves coffee and has an interest in the coffee business, I was curious about what happens behind the counter.
-Whenever I see a busy coffee or tea shop, I find myself wondering:
+As someone who loves coffee and has an interest in the coffee business, I have always been curious about what happens behind the counter.
 
-Why is this shop flooded with customers? What drives their purchases? Which products contribute most to sales? And how do managers handle the rush?
+Whenever I see a busy coffee or tea shop, whether it's a local shop or a global brand, I find myself wondering:
+
+- Why are some shops consistently flooded with customers?
+- What drives their purchases?
+- Which products contribute most to sales?
+- How do managers handle peak-hour demand?
 
 That curiosity became the starting point for this project.
 
-## 🎯 Business Objective
-An end-to-end SQL Server and Power BI analytics project that transforms six months of retail transaction data into actionable business insights for revenue growth, customer behavior, and operational optimization.
+Rather than simply building another dashboard, I wanted to use data to understand the business behind the transactions.
 
-The objective of this project is to help business stakeholders:
+## 🎯 Business Questions
 
-* Increase revenue
-* Improve Average Order Value (AOV)
-* Understand customer purchasing behavior
-* Optimize staffing during peak hours
-* Support data-driven operational decisions
+This analysis focuses on four key business questions:
 
-## 📌 Project Overview
-
-Coffee shops generate thousands of transactions every day, but raw sales data alone cannot answer critical business questions such as:
-
-* Which store generates the highest revenue?
-* What products drive profitability?
-* When should managers schedule more staff?
-* Why is Average Order Value (AOV) not increasing?
-* Which business strategies can improve sales?
-
-This project converts 149,116 raw transactions into interactive Power BI dashboards using SQL Server for data ingestion, cleaning, profiling, and exploratory analysis.
+1. **Revenue:** How are sales performing across stores, products, and months?
+2. **Customer Spending:** What drives customer purchasing behavior and Average Order Value?
+3. **Operations:** When does demand peak, and how can staffing be aligned with it?
+4. **Growth:** Where are the biggest opportunities to increase revenue and basket size?
 
 ## 📊 Dataset
 
@@ -90,11 +82,14 @@ This project features a robust end-to-end pipeline:
 1.  **Data Ingestion & Profiling (MSSQL):** 
     *   Utilized `BULK INSERT` to load raw CSV data.
     *   Performed rigorous data quality checks, including hidden whitespace detection (`LTRIM`/`RTRIM`), regex pattern matching for invalid characters, and granularity consistency checks.
+      
 2.  **Data Cleaning & Fact Table Creation:** 
     *   Handled time sequence logic, statistical outlier detection (transactions > 4 standard deviations), and missing pattern detection.
     *   Created a structured `coffee_shop_sales_fact` table with strict constraints (`CHECK(transaction_qty > 0)`).
+      
 3.  **Exploratory Data Analysis (EDA):** 
     *   Wrote complex SQL queries utilizing Window Functions and CTEs to analyze month-over-month growth, 7-day moving averages, and market basket combinations.
+      
 4.  **Data Visualization (Power BI):** 
     *   Imported the clean fact table into Power BI to build interactive, operational dashboards targeting executive summary, top-line performance, customer spending, and staffing.
 
@@ -103,80 +98,84 @@ This project features a robust end-to-end pipeline:
 ### 1. Executive Summary
 ![Executive Summary](Executive%20Summary.png)
 
-### Purpose
+### Business Question
 
-Provides an executive-level overview of business performance, highlighting revenue, customer spending, operational health, and strategic opportunities.
+**How healthy is the business overall, and where are the biggest opportunities for improvement?**
 
 ### Key Insights
-* Generated $698.81K in revenue from 149K orders.
-* Sold 214K items across three store locations.
-* Average Order Value remained stable at $4.69.
-* Hell's Kitchen emerged as the top-performing store.
-* Morning and mid-day periods contribute 57% of total orders.
 
-### Business Value
+- Generated **$698.81K** in revenue from **149K orders**.
+- Sold approximately **214K items** across three store locations.
+- Average Order Value remained at **$4.69**.
+- **Hell's Kitchen** generated the highest revenue at approximately **$236.5K**.
+- Peak periods represent a significant share of order volume, creating a clear staffing opportunity.
 
-This dashboard enables executives to quickly assess business health, identify operational bottlenecks, and prioritize revenue growth initiatives.
+### Recommended Action
+
+- Increase basket size through **beverage + bakery bundles** and checkout cross-selling.
+- Align staffing with peak demand to improve operational efficiency.
+- Use high-performing product combinations to support promotional campaigns.
 
 ### 2. Top-Line Performance
 ![Top-Line Performance](Top%20Line%20Performance.png)
 
-### Purpose
+### Business Question
 
-Monitors overall business performance by tracking revenue, order volume, store performance, profitability, and monthly growth trends.
+**How is revenue performing, and what is driving overall sales?**
 
 ### Key Insights
-* Revenue steadily increased throughout the six-month period.
-* Hell's Kitchen generated the highest revenue among all locations.
-* Coffee remains the primary revenue driver.
-* Monthly sales show consistent positive growth.
 
-### Business Value
+- Total revenue reached **$698.81K** across the six-month period.
+- Revenue shows a strong upward trend from January through June.
+- **Hell's Kitchen** leads the three locations with approximately **$236.5K** in revenue.
+- Coffee is the strongest contributor to sales.
+- Revenue is relatively balanced across the three stores, indicating no single-store dependency.
 
-Helps management evaluate financial performance, compare store profitability, and monitor revenue trends over time.
+### Recommended Action
+
+- Identify successful practices at Hell's Kitchen that could be replicated across other locations.
+- Continue monitoring product and store-level trends to identify additional growth opportunities.
 
 ### 3. Customer Spending
 ![Customer Spending](Customer%20Behavior.png)
 
-### Purpose
+### Business Question
 
-Analyzes purchasing behavior to understand buying patterns, peak shopping hours, product preferences, and opportunities to increase customer spending.
+**What drives customer spending, and how can we increase basket size?**
 
 ### Key Insights
 
-* Single-item purchases dominate customer behavior.
-* Weekday and weekend Average Order Value remain nearly identical.
-* Coffee and Tea account for the majority of customer purchases.
-* Morning rush contributes significantly to total daily orders.
-* Most two-item purchases involve Coffee combined with Tea.
+- Single-item purchases dominate customer transactions.
+- Average Order Value remains stable at **$4.69**.
+- Coffee and Tea dominate customer purchases.
+- Weekday and weekend AOV are almost identical.
+- Coffee is the most common product in both single-item and two-item purchases.
 
-### Business Value
+### Recommended Action
 
-Supports cross-selling strategies, bundle creation, promotional planning, and customer segmentation to improve Average Order Value.
-
+- Introduce **coffee + bakery** and **coffee + tea** bundle offers.
+- Use checkout cross-selling to encourage customers to add complementary products.
+- Test targeted promotions designed to move customers from one-item to multi-item purchases.
+  
 ### 4. Staffing Optimization
 ![Staffing Optimization](Staffing%20Optimization.png)
 
-### Purpose
+### Business Question
 
-Identifies peak demand periods and staffing requirements to improve operational efficiency and customer experience.
+**When do we need the most staff, and how should staffing be aligned with demand?**
 
 ### Key Insights
-* Peak demand consistently occurs between 8 AM and 10 AM.
-* Coffee products require the greatest operational focus.
-* Staffing demand remains highest during morning and mid-day periods.
-* Demand patterns are consistent across all three store locations.
 
-### Business Value
+- Customer demand is concentrated during peak morning hours.
+- Coffee represents the largest share of items sold.
+- Demand patterns are relatively consistent across the three locations.
+- Peak-hour demand creates an opportunity to better align employee schedules with customer volume.
 
-Enables managers to optimize employee scheduling, reduce wait times, improve service quality, and maintain adequate inventory during peak hours.
+### Recommended Action
 
-## 💡 Key Insights
-
-*   **Revenue & Volume:** Generated **$698.81K** in total revenue across **149K orders** (214K items sold).
-*   **Customer Behavior:** Single-item purchases completely dominate customer behavior, keeping the Average Order Value (AOV) stagnant at **$4.69**.
-*   **Operational Bottlenecks:** The morning and mid-day rushes (specifically 8 AM - 10 AM) account for **57%** of all orders. 
-*   **Store Performance:** Revenue is evenly distributed, with **Hell's Kitchen** performing slightly above the rest as the top store ($236.5K).
+- Front-load staffing during the morning rush.
+- Align employee schedules with hourly demand rather than using uniform staffing levels.
+- Ensure adequate coffee and other high-demand product inventory before peak periods
 
 ## 📈 Business Recommendations
 
@@ -225,7 +224,7 @@ Based on the analysis, the following initiatives can improve business performanc
 ### Business Analytics
 
 * Revenue Analysis
-* Customer Segmentation
+* Customer Purchasing Behavior
 * Product Performance
 * Operational Analytics
 * Staffing Optimization
@@ -233,10 +232,15 @@ Based on the analysis, the following initiatives can improve business performanc
 
 ## 🎯 Executive Conclusion
 
-The analysis demonstrates a healthy and stable business with balanced revenue distribution across all stores. While overall sales performance is strong, significant opportunities exist to increase Average Order Value through product bundling, optimize staffing during peak demand hours, and improve operational efficiency using data-driven decision-making.
+The analysis indicates a stable business with balanced revenue across the three locations. The strongest opportunities are not simply in generating more transactions, but in **increasing the value of existing transactions and aligning operations with demand**.
+
+The data points to two immediate opportunities: increase AOV through product bundling and cross-selling, and optimize staffing around peak demand periods.
 
 ## 🚀 Future Scope
+This project is based on a publicly available **U.S. coffee shop sales dataset** and served as a foundation for applying SQL Server and Power BI to real-world business questions.
 
-This project marks the beginning of my journey into retail and business analytics. As someone who is genuinely interested in the coffee business, my next goal is to apply the same analytical approach to Indian coffee and tea shop data. I hope to explore how customer behavior, product preferences, and operational challenges differ from the U.S. market and develop insights that can support better business decisions for local businesses.
+As a next step, I want to apply the same analytical approach to **Indian coffee and tea shop data**. Customer preferences, purchasing behavior, pricing, and operational challenges can differ significantly across markets.
+
+My goal is to explore these differences using local data and develop insights that can support better decisions for Indian coffee and tea businesses.
 
 
