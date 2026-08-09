@@ -30,7 +30,7 @@ This analysis focuses on four key business questions:
 
 ## 📊 Dataset
 
-| Attribute | Details |
+| **Attribute** | **Details** |
 |-----------|---------|
 | **Source** | Maven Analytics Coffee Shop Sales Dataset |
 | **Duration** | January 2023 – June 2023 |
@@ -40,7 +40,7 @@ This analysis focuses on four key business questions:
 
 ## 🛠 Technology Stack
 
-| Category | Technology|
+| **Category** | **Technology**|
 |----------|-----------|
 | Database | SQL Server |
 | Data Cleaning	| SQL |
@@ -175,7 +175,7 @@ This project features a robust end-to-end pipeline:
 
 - Front-load staffing during the morning rush.
 - Align employee schedules with hourly demand rather than using uniform staffing levels.
-- Ensure adequate coffee and other high-demand product inventory before peak periods
+- Ensure adequate coffee and other high-demand product inventory before peak periods.
 
 ## 📈 Business Recommendations
 
@@ -202,8 +202,7 @@ Analyze the practices contributing to Hell's Kitchen's slightly higher revenue a
 * Aggregate Functions
 * Ranking Functions
 * Business Analysis
-* Query Optimization
-
+  
 ### Power BI
 
 * Data Modeling
