@@ -108,13 +108,8 @@ This project features a robust end-to-end pipeline:
 - Sold approximately **214K items** across three store locations.
 - Average Order Value remained at **$4.69**.
 - **Hell's Kitchen** generated the highest revenue at approximately **$236.5K**.
-- Peak periods represent a significant share of order volume, creating a clear staffing opportunity.
-
-### Recommended Action
-
-- Increase basket size through **beverage + bakery bundles** and checkout cross-selling.
-- Align staffing with peak demand to improve operational efficiency.
-- Use high-performing product combinations to support promotional campaigns.
+- Peak periods represent a significant share of overall order volume, creating a clear staffing opportunity.
+- **Drinking Chocolate** and **Flavors** yield high-profit margins.
 
 ### 2. Top-Line Performance
 ![Top-Line Performance](Top%20Line%20Performance.png)
@@ -127,14 +122,15 @@ This project features a robust end-to-end pipeline:
 
 - Total revenue reached **$698.81K** across the six-month period.
 - Revenue shows a strong upward trend from January through June.
+- Average Order Value remains stable at **$4.69**.
 - **Hell's Kitchen** leads the three locations with approximately **$236.5K** in revenue.
-- Coffee is the strongest contributor to sales.
+- Coffee and Tea are the strongest contributors to sales followed by Bakery and Dinking Chocolate.
 - Revenue is relatively balanced across the three stores, indicating no single-store dependency.
 
 ### Recommended Action
 
-- Identify successful practices at Hell's Kitchen that could be replicated across other locations.
-- Continue monitoring product and store-level trends to identify additional growth opportunities.
+- Capitalize on the strong upward trend from Jan–June by running targeted promotions for high-margin categories like **Drinking Chocolate** and **Flavors**.
+- Audit **Hell's Kitchen’s** local marketing and product mix to identify successful strategies that can be replicated across Astoria and Lower Manhattan.
 
 ### 3. Customer Spending
 ![Customer Spending](Customer%20Behavior.png)
@@ -145,17 +141,16 @@ This project features a robust end-to-end pipeline:
 
 ### Key Insights
 
-- Single-item purchases dominate customer transactions.
-- Average Order Value remains stable at **$4.69**.
 - Coffee and Tea dominate customer purchases.
 - Weekday and weekend AOV are almost identical.
 - Coffee is the most common product in both single-item and two-item purchases.
+- While single item purchase dominate the overall store sales, isolating the "flavors" category reveals a behavioral inversion.
 
 ### Recommended Action
 
 - Introduce **coffee + bakery** and **coffee + tea** bundle offers.
 - Use checkout cross-selling to encourage customers to add complementary products.
-- Test targeted promotions designed to move customers from one-item to multi-item purchases.
+- Test targeted promotions designed to move customers from one-item to multi-item purchases by introducing **Family Bundling**
   
 ### 4. Staffing Optimization
 ![Staffing Optimization](Staffing%20Optimization.png)
@@ -174,19 +169,20 @@ This project features a robust end-to-end pipeline:
 ### Recommended Action
 
 - Front-load staffing during the morning rush.
-- Align employee schedules with hourly demand rather than using uniform staffing levels.
-- Ensure adequate coffee and other high-demand product inventory before peak periods.
+- Align employee schedules with hourly demand rather than utilizing uniform staffing levels.
+- Ensure adequate inventory for coffee and other high-demand products before peak periods.
 
 ## 📈 Business Recommendations
 
 ### 1. Increase Average Order Value
-Move customers from single-item purchases toward multi-item baskets through beverage + bakery bundles and checkout cross-selling.
+Move customers from single-item purchases toward multi-item baskets through **beverage + bakery** bundles and checkout cross-selling like add **flavors** to their coffee. Promote high-margin (60%) Drinking Chocolate during evening hours.
+Additionally, maximize revenue per transaction by  encouraging customers to buy high price categories.
 
 ### 2. Optimize Peak-Hour Staffing
-Align employee schedules with hourly demand, particularly during the morning rush, to improve service efficiency and reduce potential wait times.
+Align employee schedules with hourly demand, particularly during the morning rush, to improve service efficiency, maximize throughput, and reduce potential wait times.
 
 ### 3. Strengthen Inventory Planning
-Prioritize inventory availability for high-demand categories, particularly Coffee, before peak operating periods.
+Prioritize inventory availability for high-demand categories like Coffee and Tea, before peak operating periods.
 
 ### 4. Replicate Store-Level Success
 Analyze the practices contributing to Hell's Kitchen's slightly higher revenue and evaluate whether they can be applied across other locations.
