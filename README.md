@@ -256,10 +256,16 @@ Product Categories: Items are strictly grouped into Coffee, Tea, Bakery, Drinkin
 
 Timeframe Restriction: The dataset strictly covers January 1, 2023, through June 30, 2023. Any requests for data outside this window (e.g., Q3, Q4, or 2024) cannot be answered.
 
-### No Customer Identifiers: This dataset contains completely anonymized transactions. There are no customer names, emails, loyalty IDs, or account numbers.
+### No Customer Identifiers: 
 
-### No Retention Metrics: Because there are no unique customer IDs, it is impossible to calculate customer retention, churn rates, repeat purchase rates, or unique customer counts.
+This dataset contains completely anonymized transactions. There are no customer names, emails, loyalty IDs, or account numbers.
 
-### Market Scope: The current data reflects the U.S. market (New York). Indian market data is part of the future scope and is not currently available for query.
+### No Retention Metrics: 
+
+Because there are no unique customer IDs, it is impossible to calculate customer retention, churn rates, repeat purchase rates, or unique customer counts.
+
+### Market Scope: 
+
+The current data reflects the U.S. market (New York). Indian market data is part of the future scope and is not currently available for query.
 
 
