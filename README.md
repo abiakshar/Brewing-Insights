@@ -231,4 +231,35 @@ As a next step, I want to apply the same analytical approach to **Indian coffee 
 
 My goal is to explore these differences using local data and develop insights that can support better decisions for Indian coffee and tea businesses.
 
+## 📚 Data Dictionary & System Limitations
+Metric Definitions & Formulas
+
+Revenue: Calculated as transaction_qty multiplied by unit_price.
+
+Total Revenue: The sum of all Revenue across a specified period or category.
+
+Transaction Count: The number of unique transaction_ids (not the total number of items sold).
+
+Average Order Value (AOV): Calculated as Total Revenue divided by Transaction Count.
+
+Items Sold / Volume: The sum of transaction_qty.
+
+Peak Hours (Morning Rush): Defined operationally as transactions occurring between 7:00 AM and 10:00 AM.
+
+### Categorical Dimensions
+
+Locations: Data is restricted to exactly three stores: Astoria, Hell's Kitchen, and Lower Manhattan.
+
+Product Categories: Items are strictly grouped into Coffee, Tea, Bakery, Drinking Chocolate, Flavors, and Others.
+
+### Data Limitations (Out of Scope)
+
+Timeframe Restriction: The dataset strictly covers January 1, 2023, through June 30, 2023. Any requests for data outside this window (e.g., Q3, Q4, or 2024) cannot be answered.
+
+### No Customer Identifiers: This dataset contains completely anonymized transactions. There are no customer names, emails, loyalty IDs, or account numbers.
+
+### No Retention Metrics: Because there are no unique customer IDs, it is impossible to calculate customer retention, churn rates, repeat purchase rates, or unique customer counts.
+
+### Market Scope: The current data reflects the U.S. market (New York). Indian market data is part of the future scope and is not currently available for query.
+
 
