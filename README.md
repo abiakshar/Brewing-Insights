@@ -273,4 +273,18 @@ Because there are no unique customer IDs, it is impossible to calculate customer
 
 The current data reflects the U.S. market (New York). Indian market data is part of the future scope and is not currently available for query.
 
+## 🚀 Phase 2: AI-Powered Analytics Assistant (Streamlit + LLM)
+
+To make the data accessible via natural language, I engineered an AI Assistant that dynamically routes queries between a relational database and unstructured text documentation.
+
+### System Architecture
+* **The Intent Router:** Uses Google Gemini to analyze user prompts and route quantitative queries to Snowflake and qualitative policy questions to a local Knowledge Base.
+* **Text-to-SQL Engine:** Translates natural language into Snowflake T-SQL, automatically applying strict schema constraints, formatting `VARCHAR` dates (e.g., `TO_DATE`), and enforcing a `LIMIT 5` executive summary rule for trend analysis.
+* **Document RAG Engine:** Retrieves answers regarding store policies and dataset boundaries directly from Markdown documentation without requiring a database connection.
+* **Interactive UI:** Built a custom Streamlit web interface with a coffee-themed layout that automatically visualizes SQL outputs into bar charts for instant managerial insights.
+
+### Technical Challenges Overcome
+* **Data Type Handling:** Resolved implicit conversion errors in Snowflake by embedding strict date-casting rules (`DAYNAME`, `TO_DATE`) directly into the LLM's semantic context window.
+* **Non-Deterministic AI Routing:** Prevented the LLM from hallucinating routing decisions (e.g., sending staffing queries to the RAG engine) by refining the prompt architecture to strictly map operational demand keywords to the SQL executor.
+
 
