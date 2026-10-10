@@ -37,18 +37,25 @@ def route_question(question):
 st.set_page_config(page_title="Brewing Insights AI", page_icon="☕", layout="wide")
 
 # Build a Sidebar for Branding and Context
-with st.sidebar:
-    st.image("https://cdn-icons-png.flaticon.com/512/924/924514.png", width=100) # Free coffee icon
-    st.title("Brewing Insights")
-    st.markdown("### 🤖 AI Analyst Assistant")
-    st.markdown("---")
-    st.markdown("**Powered by:**")
-    st.markdown("- Snowflake Data Cloud")
-    st.markdown("- Gemini AI Router")
-    st.markdown("- Python & Streamlit")
-    st.markdown("---")
-    st.caption("Ask quantitative questions about sales data, or qualitative questions about store policies.")
-
+# --- Sidebar: Dataset Quick Reference ---
+with st.sidebar.expander("📊 Dataset Quick Reference", expanded=True):
+    st.markdown("""
+    **Locations:**
+    * Astoria
+    * Hell's Kitchen
+    * Lower Manhattan
+    
+    **Popular Categories:**
+    * Coffee
+    * Tea
+    * Bakery
+    * Drinking Chocolate
+    
+    **Try asking:**
+    * *"What were the top 5 products in Lower Manhattan?"*
+    * *"Show me the daily revenue trends for Astoria."*
+    * *"What is the return policy?"*
+    """)
 # Main Page Header
 st.title("☕ Welcome to Brewing Insights")
 st.markdown("Enter your query below. The AI will automatically route it to the Snowflake database or our internal Knowledge Base.")
