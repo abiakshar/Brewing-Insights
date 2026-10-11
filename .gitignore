@@ -1,0 +1,14 @@
+# Streamlit secrets (CRITICAL)
+.streamlit/secrets.toml
+.streamlit/
+
+# Python environments and caches
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.env
+
+# OS generated files
+.DS_Store
