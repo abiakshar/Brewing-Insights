@@ -63,7 +63,6 @@ st.markdown("Enter your query below. The AI will automatically route it to the S
 # Chat Input
 user_question = st.text_input("How can I help you analyze the business today?", placeholder="e.g., What was the total revenue in Astoria?")
 
-
 if st.button("Ask AI") and user_question:
     with st.spinner("Analyzing intent..."):
         route = route_question(user_question)
@@ -78,6 +77,7 @@ if st.button("Ask AI") and user_question:
             else:
                 with st.expander("View Generated SQL Code"):
                     st.code(sql_code, language="sql")
+                
                 try:
                     cols, rows = run_snowflake_query(sql_code)
                     df = pd.DataFrame(rows, columns=cols)
@@ -95,27 +95,23 @@ if st.button("Ask AI") and user_question:
                         # Display clean table without row index numbers
                         st.dataframe(df, hide_index=True)
                         
-                        # NEW: Automatically generate a visual chart if there are multiple rows
+                        # Automatically generate a visual chart if there are multiple rows
                         if len(df) > 1 and len(cols) >= 2:
-                            st.write("### 📊 Visual Trend")
-                            # Sets the first column (e.g., Day/Hour) as X-axis and the last metric as Y-axis
-                         # Check if the query returned multiple rows to draw a chart
-        if len(df) > 1:
-            # Set the first column as the index for the chart
-            chart_data = df.set_index(df.columns[0])
-            
-            # Check if the first column name suggests a time trend
-            time_keywords = ['date', 'day', 'month', 'year', 'time']
-            first_col_name = str(df.columns[0]).lower()
-            is_trend = any(word in first_col_name for word in time_keywords)
-            
-            # Draw a Line chart for dates, Bar chart for categories
-            st.markdown("### 📊 Visual Insight")
-            if is_trend:
-                st.line_chart(chart_data)
-            else:
-                st.bar_chart(chart_data)
-                        
+                            # Set the first column as the index for the chart
+                            chart_data = df.set_index(df.columns[0])
+                            
+                            # Check if the first column name suggests a time trend
+                            time_keywords = ['date', 'day', 'month', 'year', 'time']
+                            first_col_name = str(df.columns[0]).lower()
+                            is_trend = any(word in first_col_name for word in time_keywords)
+                            
+                            # Draw a Line chart for dates, Bar chart for categories
+                            st.markdown("### 📊 Visual Insight")
+                            if is_trend:
+                                st.line_chart(chart_data)
+                            else:
+                                st.bar_chart(chart_data)
+                                
                 except Exception as e:
                     st.error(f"Execution Error: {e}")
                     
@@ -124,4 +120,5 @@ if st.button("Ask AI") and user_question:
         with st.spinner("Searching documents..."):
             answer = answer_with_rag(user_question, API_KEY)
             st.success("✅ Answer Found!")
+            st.write(answer)
             st.write(answer)
