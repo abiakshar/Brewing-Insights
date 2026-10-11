@@ -92,8 +92,16 @@ if st.button("Ask AI") and user_question:
                         else:
                             st.write(f"**Answer:** {val}")
                     else:
-                        # Display clean table without row index numbers
-                        st.dataframe(df, hide_index=True)
+                        # 1. Create a display copy so we don't break the chart's numbers
+                        display_df = df.copy()
+                        
+                        # 2. Add $ and 2 decimal places to financial columns
+                        for col in display_df.select_dtypes(include=['number']).columns:
+                            if any(word in col.lower() for word in ['revenue', 'price', 'sales', 'profit', 'total']):
+                                display_df[col] = display_df[col].apply(lambda x: f"${x:,.2f}")
+                                
+                        # 3. Display the formatted clean table
+                        st.dataframe(display_df, hide_index=True)
                         
                         # Automatically generate a visual chart if there are multiple rows
                         if len(df) > 1 and len(cols) >= 2:
