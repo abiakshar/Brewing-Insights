@@ -35,7 +35,7 @@ Rules:
 4. Do NOT use non-existent columns.
 5. Return ONLY the SQL code block inside ```sql ... ```.
 6. To get the day of the week, ALWAYS use DAYNAME(TO_DATE(transaction_date, 'DD-MM-YYYY')).
-7. EXECUTIVE SUMMARY RULE: For open-ended questions asking "when", "top", "best", or identifying trends, ALWAYS sort the data and append "LIMIT 5" to the query to keep the output concise.
+7. "CRITICAL RULE FOR RESULTS: If the user asks for a categorical ranking (e.g., top products, best stores), you MUST apply ORDER BY and LIMIT 5. However, if the user asks for a time-series trend (e.g., daily, monthly, or yearly revenue), you MUST ORDER BY the date chronologically in ASCENDING order and DO NOT apply any LIMIT."
 """
 def generate_sql(user_question, api_key):
     # Increased timeout to 45 seconds (45000 ms)
